@@ -18,8 +18,8 @@ Maven dependency:
 <dependencies>
     <dependency>
         <groupId>com.github.danieldieeins</groupId>
-        <artifactId>shademebaby</artifactId>
-        <version>1.0.0</version>
+        <artifactId>ShadeMeBaby</artifactId>
+        <version>1.0.1</version>
         <scope>compile</scope>
     </dependency>
     <!--Other dependencies...-->
@@ -36,7 +36,7 @@ repositories {
 Gradle dependency:
 ```
 dependencies {
-    implementation 'com.github.danieldieeins:shademebaby:1.0.0'
+    implementation 'com.github.danieldieeins:ShadeMeBaby:1.0.1'
     //Other dependencies...
 }
 ```
