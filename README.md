@@ -1,4 +1,4 @@
-# ShadeMeBaby ``1.0.0``
+# ShadeMeBaby ``1.0.1``
 Just a small library for my projects.
 
 How to implement (Maven/Gradle)
