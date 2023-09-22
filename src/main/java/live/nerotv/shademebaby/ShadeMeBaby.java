@@ -1,6 +1,6 @@
-package live.nerotv;
+package live.nerotv.shademebaby;
 
-import live.nerotv.logger.Logger;
+import live.nerotv.shademebaby.logger.Logger;
 
 public class ShadeMeBaby {
 

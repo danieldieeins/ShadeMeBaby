@@ -1,6 +1,6 @@
-package live.nerotv.util;
+package live.nerotv.shademebaby.util;
 
-import live.nerotv.ShadeMeBaby;
+import live.nerotv.shademebaby.ShadeMeBaby;
 
 import java.io.File;
 

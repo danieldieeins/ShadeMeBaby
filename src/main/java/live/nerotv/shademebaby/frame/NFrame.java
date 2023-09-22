@@ -1,7 +1,7 @@
-package live.nerotv.frame;
+package live.nerotv.shademebaby.frame;
 
-import live.nerotv.ShadeMeBaby;
-import live.nerotv.util.ResourceUtil;
+import live.nerotv.shademebaby.ShadeMeBaby;
+import live.nerotv.shademebaby.util.ResourceUtil;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;

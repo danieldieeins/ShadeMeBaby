@@ -1,4 +1,4 @@
-package live.nerotv.logger;
+package live.nerotv.shademebaby.logger;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
