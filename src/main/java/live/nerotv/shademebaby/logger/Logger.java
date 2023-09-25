@@ -26,9 +26,7 @@ public class Logger {
     }
 
     public void error(String message) {
-        if(debug) {
-            System.out.println(getPrefix().replace(name+"]",name+"|")+"ERROR] "+message);
-        }
+        System.out.println(getPrefix().replace(name + "]", name + "|") + "ERROR] " + message);
     }
 
     public void debug(String message) {
