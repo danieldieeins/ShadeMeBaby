@@ -1,5 +1,6 @@
-package live.nerotv.shademebaby.file;
+package live.nerotv.shademebaby.utils;
 
+import live.nerotv.shademebaby.ShadeMeBaby;
 import org.apache.commons.compress.archivers.ArchiveEntry;
 import org.apache.commons.compress.archivers.zip.ZipArchiveInputStream;
 import java.io.*;
@@ -8,7 +9,7 @@ import java.net.URL;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public class FileUtils {
+public class FileUtil {
 
     public static File downloadFile(String urlString, String path) {
         try {
@@ -53,6 +54,29 @@ public class FileUtils {
             return true;
         } catch (IOException e) {
             return false;
+        }
+    }
+
+    public static void deleteFolder(File folder) {
+        File[] files = folder.listFiles();
+        if(files!=null) {
+            for(File f: files) {
+                if(f.isDirectory()) {
+                    deleteFolder(f);
+                } else {
+                    f.delete();
+                }
+            }
+        }
+        folder.delete();
+    }
+
+    public static File getResourceFile(String resourceString) {
+        try {
+            return new File(ShadeMeBaby.class.getClassLoader().getResource(resourceString).getFile());
+        } catch (Exception e) {
+            ShadeMeBaby.getLogger().debug("(ResourceUtil) Couldn't get resources file \""+resourceString+"\": "+e.getMessage());
+            return null;
         }
     }
 }

@@ -1,4 +1,4 @@
-# ShadeMeBaby ``1.1.0``
+# ShadeMeBaby ``1.2.0`` `Java 21`
 Just a small library for my projects.
 
 How to implement (Maven/Gradle)
@@ -19,7 +19,7 @@ Maven dependency:
     <dependency>
         <groupId>com.github.danieldieeins</groupId>
         <artifactId>ShadeMeBaby</artifactId>
-        <version>1.1.0</version>
+        <version>1.2.0</version>
         <scope>compile</scope>
     </dependency>
     <!--Other dependencies...-->
@@ -36,7 +36,7 @@ repositories {
 Gradle dependency:
 ```
 dependencies {
-    implementation 'com.github.danieldieeins:ShadeMeBaby:1.1.0'
+    implementation 'com.github.danieldieeins:ShadeMeBaby:1.2.0'
     //Other dependencies...
 }
 ```

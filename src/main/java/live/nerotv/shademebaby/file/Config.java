@@ -1,10 +1,10 @@
 package live.nerotv.shademebaby.file;
 
 import com.google.gson.*;
-
 import java.io.*;
 import java.net.URLDecoder;
 
+@SuppressWarnings("all")
 public class Config {
 
     private Gson gson;

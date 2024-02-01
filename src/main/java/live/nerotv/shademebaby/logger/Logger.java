@@ -18,7 +18,7 @@ public class Logger {
     }
 
     private String getPrefix() {
-        return "["+new SimpleDateFormat("yyyy.MM.dd HH-mm-ss").format(Calendar.getInstance().getTime())+"|"+name+"]";
+        return "["+new SimpleDateFormat("yyyy.MM.dd-HH:mm:ss").format(Calendar.getInstance().getTime())+"|"+name+"]";
     }
 
     public void log(String message) {
