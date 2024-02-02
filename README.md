@@ -1,5 +1,5 @@
 # ShadeMeBaby ``1.2.0`` `Java 21`
-Just a small library for my projects.
+Just a library for my projects.
 
 How to implement (Maven/Gradle)
 ---
