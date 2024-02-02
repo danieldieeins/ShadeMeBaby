@@ -4,12 +4,13 @@ import live.nerotv.shademebaby.logger.Logger;
 
 public class ShadeMeBaby {
 
-    private static Logger logger;
+    private static Logger logger = new Logger("ShadeMeBaby");
 
     public static Logger getLogger() {
-        if(logger==null) {
-            logger = new Logger("ShadeMeBaby");
-        }
         return logger;
+    }
+
+    public static void setLogger(Logger newLogger) {
+        logger = newLogger;
     }
 }
