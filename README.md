@@ -1,3 +1,4 @@
+[![](https://jitpack.io/v/danieldieeins/ShadeMeBaby.svg)](https://jitpack.io/#danieldieeins/ShadeMeBaby)
 # ShadeMeBaby ``1.2.1`` `Java 21`
 Just a library for my projects.
 
