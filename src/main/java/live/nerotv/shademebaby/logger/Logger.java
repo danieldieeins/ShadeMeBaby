@@ -17,6 +17,10 @@ public class Logger {
         this.debug = debug;
     }
 
+    public boolean isDebugEnabled() {
+        return debug;
+    }
+
     private String getPrefix() {
         return "["+new SimpleDateFormat("yyyy.MM.dd-HH:mm:ss").format(Calendar.getInstance().getTime())+"|"+name+"]";
     }
