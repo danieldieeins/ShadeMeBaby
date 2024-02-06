@@ -58,7 +58,7 @@ public class WebFrame extends JFrame {
     private void init(String url, String jcefPath) throws UnsupportedPlatformException, IOException, CefInitializationException, InterruptedException {
         browserFocus = true;
         File installDir = new File(jcefPath);
-        ShadeMeBaby.getLogger().debug("NEED_JCEF_INSTALL: "+installDir.mkdirs());
+        ShadeMeBaby.getLogger().debug("[WEBFRAME] Is jCef installed: "+!installDir.mkdirs());
         CefAppBuilder builder = new CefAppBuilder();
         builder.setAppHandler(new MavenCefAppHandlerAdapter() {
             @Override @Deprecated

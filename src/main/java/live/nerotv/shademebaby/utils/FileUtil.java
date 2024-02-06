@@ -75,7 +75,7 @@ public class FileUtil {
         try {
             return new File(ShadeMeBaby.class.getClassLoader().getResource(resourceString).getFile());
         } catch (Exception e) {
-            ShadeMeBaby.getLogger().debug("(ResourceUtil) Couldn't get resources file \""+resourceString+"\": "+e.getMessage());
+            ShadeMeBaby.getLogger().debug("[FILE UTIL] Couldn't get resources file \""+resourceString+"\": "+e.getMessage());
             return null;
         }
     }
