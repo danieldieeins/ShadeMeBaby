@@ -4,7 +4,7 @@ import live.nerotv.shademebaby.logger.Logger;
 
 public class ShadeMeBaby {
 
-    private static Logger logger = new Logger("SHMEBY");
+    private static Logger logger = new Logger("SHMEBA");
 
     public static Logger getLogger() {
         return logger;
