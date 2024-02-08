@@ -9,7 +9,7 @@ import java.net.URL;
 
 public class GsonUtil {
 
-    private static JsonObject getObject(String url) {
+    public static JsonObject getObject(String url) {
         try {
             HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
             connection.setRequestMethod("GET");
