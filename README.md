@@ -20,7 +20,7 @@ Maven dependency:
     <dependency>
         <groupId>com.github.danieldieeins</groupId>
         <artifactId>ShadeMeBaby</artifactId>
-        <version>2024.2.3</version>
+        <version>2024.2.4</version>
         <scope>compile</scope>
     </dependency>
     <!--Other dependencies...-->
@@ -37,7 +37,7 @@ repositories {
 Gradle dependency:
 ```
 dependencies {
-    implementation 'com.github.danieldieeins:ShadeMeBaby:2024.2.3'
+    implementation 'com.github.danieldieeins:ShadeMeBaby:2024.2.4'
     //Other dependencies...
 }
 ```
