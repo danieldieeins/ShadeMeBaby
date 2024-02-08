@@ -10,7 +10,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class OnlineConfig implements Comparable {
+public class OnlineConfig implements CFG {
     private Gson gson;
     private JsonElement json;
     private String url;
@@ -25,16 +25,11 @@ public class OnlineConfig implements Comparable {
         }
     }
 
-    @Override
-    public int compareTo(Object o) {
-        OnlineConfig c = (OnlineConfig)o;
-        return json.toString().compareTo(c.getJson().toString());
-    }
-
     public String getUrl() {
         return url;
     }
 
+    @Override
     public Gson getGson() {
         return gson;
     }
@@ -43,6 +38,7 @@ public class OnlineConfig implements Comparable {
         return json;
     }
 
+    @Override
     public String getString(String path) {
         if (get(path) != null) {
             return get(path).toString();
@@ -50,10 +46,12 @@ public class OnlineConfig implements Comparable {
         return null;
     }
 
+    @Override
     public int getInt(String path) {
         return getInteger(path);
     }
 
+    @Override
     public Integer getInteger(String path) {
         if (get(path) != null) {
             try {
@@ -64,10 +62,12 @@ public class OnlineConfig implements Comparable {
         return null;
     }
 
+    @Override
     public double getDoub(String path) {
         return getDouble(path);
     }
 
+    @Override
     public Double getDouble(String path) {
         if (get(path) != null) {
             try {
@@ -78,10 +78,12 @@ public class OnlineConfig implements Comparable {
         return null;
     }
 
+    @Override
     public boolean getBool(String path) {
         return getBoolean(path);
     }
 
+    @Override
     public Boolean getBoolean(String path) {
         if (get(path) != null) {
             try {
@@ -92,10 +94,12 @@ public class OnlineConfig implements Comparable {
         return null;
     }
 
+    @Override
     public boolean checkEntry(String path, Object value) {
         return get(path) != null;
     }
 
+    @Override
     public Object get(String path) {
         JsonObject rootNode = json.getAsJsonObject();
         String[] parts = path.split("\\.");

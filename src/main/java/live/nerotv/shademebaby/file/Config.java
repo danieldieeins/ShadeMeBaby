@@ -5,7 +5,7 @@ import java.io.*;
 import java.net.URLDecoder;
 
 @SuppressWarnings("all")
-public class Config {
+public class Config implements CFG {
 
     private Gson gson;
     private File jsonFile;
@@ -51,10 +51,12 @@ public class Config {
         return path;
     }
 
+    @Override
     public Gson getGson() {
         return gson;
     }
 
+    @Override
     public String getString(String path) {
         if (get(path) != null) {
             return get(path).toString();
@@ -62,10 +64,12 @@ public class Config {
         return null;
     }
 
+    @Override
     public int getInt(String path) {
         return getInteger(path);
     }
 
+    @Override
     public Integer getInteger(String path) {
         if (get(path) != null) {
             try {
@@ -76,10 +80,12 @@ public class Config {
         return null;
     }
 
+    @Override
     public double getDoub(String path) {
         return getDouble(path);
     }
 
+    @Override
     public Double getDouble(String path) {
         if (get(path) != null) {
             try {
@@ -90,10 +96,12 @@ public class Config {
         return null;
     }
 
+    @Override
     public boolean getBool(String path) {
         return getBoolean(path);
     }
 
+    @Override
     public Boolean getBoolean(String path) {
         if (get(path) != null) {
             try {
@@ -104,10 +112,13 @@ public class Config {
         return null;
     }
 
-    public void checkEntry(String path, Object value) {
+    @Override
+    public boolean checkEntry(String path, Object value) {
         if (get(path) == null) {
             set(path, value);
+            return false;
         }
+        return true;
     }
 
     public void set(String path, Object value) {
@@ -134,6 +145,7 @@ public class Config {
         }
     }
 
+    @Override
     public Object get(String path) {
         try {
             JsonObject rootNode = JsonParser.parseReader(jsonFileReader()).getAsJsonObject();
