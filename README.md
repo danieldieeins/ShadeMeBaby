@@ -1,5 +1,5 @@
 [![](https://jitpack.io/v/danieldieeins/ShadeMeBaby.svg)](https://jitpack.io/#danieldieeins/ShadeMeBaby)
-# ShadeMeBaby ``v2024.2.4`` `JDK 21`
+# ShadeMeBaby ``v2024.2.5`` `JDK 21`
 Just a library with some tools and cool stuff.
 
 How to implement (Maven/Gradle)
@@ -20,7 +20,7 @@ Maven dependency:
     <dependency>
         <groupId>com.github.danieldieeins</groupId>
         <artifactId>ShadeMeBaby</artifactId>
-        <version>2024.2.4</version>
+        <version>2024.2.5</version>
         <scope>compile</scope>
     </dependency>
     <!--Other dependencies...-->
@@ -37,7 +37,7 @@ repositories {
 Gradle dependency:
 ```
 dependencies {
-    implementation 'com.github.danieldieeins:ShadeMeBaby:2024.2.4'
+    implementation 'com.github.danieldieeins:ShadeMeBaby:2024.2.5'
     //Other dependencies...
 }
 ```
