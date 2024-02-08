@@ -10,11 +10,13 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class OnlineConfig {
+public class OnlineConfig implements Comparable {
     private Gson gson;
     private JsonElement json;
+    private String url;
 
     public OnlineConfig(String url) {
+        this.url = url;
         this.gson = new GsonBuilder().setPrettyPrinting().create();
         try {
             json = gson.fromJson(getFromURL(url), JsonElement.class);
@@ -23,8 +25,22 @@ public class OnlineConfig {
         }
     }
 
+    @Override
+    public int compareTo(Object o) {
+        OnlineConfig c = (OnlineConfig)o;
+        return json.toString().compareTo(c.getJson().toString());
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
     public Gson getGson() {
         return gson;
+    }
+
+    public JsonElement getJson() {
+        return json;
     }
 
     public String getString(String path) {
