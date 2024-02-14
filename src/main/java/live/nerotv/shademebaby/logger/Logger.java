@@ -30,7 +30,7 @@ public class Logger {
     }
 
     public void error(String message) {
-        System.out.println(getPrefix().replace("OUT","ERR")+message);
+        System.err.println(getPrefix().replace("OUT","ERR")+message);
     }
 
     public void debug(String message) {
