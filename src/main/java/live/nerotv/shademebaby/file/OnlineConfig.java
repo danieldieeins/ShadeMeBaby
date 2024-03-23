@@ -11,6 +11,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class OnlineConfig implements CFG {
+
     private Gson gson;
     private JsonElement json;
     private String url;
