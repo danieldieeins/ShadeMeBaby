@@ -1,5 +1,5 @@
 [![](https://jitpack.io/v/danieldieeins/ShadeMeBaby.svg)](https://jitpack.io/#danieldieeins/ShadeMeBaby)
-# ShadeMeBaby ``v2024.2.6`` `JDK 21`
+# ShadeMeBaby ``v2024.3.1`` `JDK 21`
 Just a library with some tools and cool stuff.
 
 How to implement (Maven/Gradle)
