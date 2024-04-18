@@ -71,9 +71,30 @@ public class FileUtil {
         folder.delete();
     }
 
-    public static File getResourceFile(String resourceString) {
+    public static void extractResourceFile(String sourceFileName, String destinationFileName, Class class_) {
+        new File(new File(destinationFileName).getParent()).mkdirs();
         try {
-            return new File(ShadeMeBaby.class.getClassLoader().getResource(resourceString).getFile());
+            ClassLoader classLoader = class_.getClassLoader();
+            InputStream inputStream = classLoader.getResourceAsStream(sourceFileName);
+            if (inputStream == null) {
+                return;
+            }
+            OutputStream outputStream = new FileOutputStream(destinationFileName);
+            byte[] buffer = new byte[1024];
+            int length;
+            while ((length = inputStream.read(buffer)) > 0) {
+                outputStream.write(buffer, 0, length);
+            }
+            inputStream.close();
+            outputStream.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static File getResourceFile(String resourceString, Class class_) {
+        try {
+            return new File(class_.getClassLoader().getResource(resourceString).getFile());
         } catch (Exception e) {
             ShadeMeBaby.getLogger().debug("[FILE UTIL] Couldn't get resources file \""+resourceString+"\": "+e.getMessage());
             return null;
